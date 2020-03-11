@@ -1,0 +1,211 @@
+@import "normalize.scss";
+@import "fonts.scss";
+
+// === Variables ===
+$color-white: #fff;
+$color-black: #000;
+$color-sberbank: #13B75F;
+$color-vtb: #009FDF;
+$color-bars: #009C32;
+$color-mkb: #BB0032;
+$color-rf: #23353E;
+$color-reborn: #1E4679;
+$color-agriculture: #245F34;
+$color-psb: #2B2C84;
+$color-transcapital: #00AAA9;
+
+
+// === / Variables ===
+
+// === Mixins ===
+@mixin font-modelica {
+    font-family: 'Bw Modelica', sans-serif;
+}
+
+@mixin font-firaSans {
+    font-family: 'Fira Sans', sans-serif;
+}
+
+// === / Mixins ===
+
+// === Common ===
+* {
+    box-sizing: border-box;
+}
+
+body {
+    @include font-modelica;
+}
+
+img {
+    max-width: 100%;
+}
+
+.section-inner {
+    max-width: 1300px;
+    width: 100%;
+}
+
+:root {
+    font-size: 16px;
+}
+
+// === / Common ===
+
+// === Section Credit ===
+.section-credit {
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+
+    &-parameters {
+        display: flex;
+        padding: 2.6rem 1.6rem;
+
+        &__heading h3 {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+    }
+
+    &-banks {
+        display: flex;
+        flex-direction: column;
+
+        &__block {
+            display: flex;
+            margin-bottom: 20px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &-card {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                max-width: 420px;
+                min-height: 10.6rem;
+                width: 100%;
+                padding: 1.615rem 1.25rem 1.375rem;
+                color: $color-white;
+            }
+
+            &-card-upper {
+                display: flex;
+                justify-content: space-between;
+
+            }
+
+            &-card-upper span {
+                font-size: 2.5rem;
+                font-weight: bold;
+                opacity: .54;
+                line-height: 2.5rem;
+            }
+
+            &-card-lower {
+                display: flex;
+                justify-content: flex-end;
+                font-weight: bold;
+                font-size: .875rem;
+                text-align: right;
+            }
+
+            &-card-lower span {
+                font-size: 2.125rem;
+                margin-left: 1rem;
+            }
+
+            &-card:nth-child(1),
+            &-card:nth-child(2),
+            &-card:nth-child(4),
+            &-card:nth-child(5),
+            &-card:nth-child(7),
+            &-card:nth-child(8) {
+                margin-right: 20px;
+            }
+
+            .card-sberbank {
+                background-color: $color-sberbank;
+            }
+
+            .card-vtb {
+                background-color: $color-vtb;
+            }
+
+            .card-bars {
+                background-color: $color-bars;
+            }
+
+            .card-mkb {
+                background-color: $color-mkb;
+            }
+
+            .card-rf {
+                background-color: $color-rf;
+            }
+
+            .card-reborn {
+                background-color: $color-reborn;
+            }
+
+            .card-agriculture {
+                background-color: $color-agriculture;
+            }
+
+            .card-psb {
+                background-color: $color-psb;
+            }
+
+            .card-transcapital {
+                background-color: $color-transcapital;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1300px) {
+    :root {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1180px) {
+    :root {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .section-credit {
+        &-banks__block {
+            flex-direction: column;
+        }
+
+        &-banks__block-card {
+            max-width: 100%;
+            background-color: $color-white !important;
+            margin-right: 0 !important;
+            color: $color-black;
+
+            &-lower {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            &-lower>&-lower_elem:first-child {
+                margin-left: .6rem;
+            }
+
+            &-lower_elem br {
+                display: none;
+            }
+        }
+    }
+}
+
+
+
+// === / Section Credit ===
